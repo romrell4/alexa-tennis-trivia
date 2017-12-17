@@ -1,0 +1,22 @@
+[
+	{
+		"question": "Which male tennis player has won the most major titles in his career?",
+		"answers": [
+			"Roger Federer",
+			"Rafael Nadal",
+			"Pete Sampras",
+			"Rod Laver"
+		],
+		"correct_index": 0
+	},
+	{
+		"question": "Who defeated tennis player Bobby Riggs in the famous Battle of the Sexes?",
+		"answers": [
+			"Margaret Court",
+			"Billy Jean King",
+			"Chris Evert-Lloyd",
+			"Martina Navratilova"
+		],
+		"correct_index": 1
+	}
+]

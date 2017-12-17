@@ -1,5 +1,6 @@
 import json
 import random
+from string import ascii_lowercase
 
 def lambda_handler(event, context):
     print(event)
@@ -10,7 +11,13 @@ def lambda_handler(event, context):
     with open("questions.json") as f:
         questions = json.load(f)
 
-    return response(random.choice(questions)["question"], False)
+    return response(get_text(random.choice(questions)), False)
+
+def get_text(question):
+    text = question["question"]
+    for letter, answer in zip(ascii_lowercase, question["answers"]):
+        text += " {}: {}.".format(letter, answer)
+    return text
 
 def response(output_text, finish_session = False):
     return {
